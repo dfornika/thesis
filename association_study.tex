@@ -1,0 +1,108 @@
+\chapter{A Case-Control Association Study for Mitochondrial Variants and Healthy Aging}\label{assoc}
+In order to identify variants that are associated with the healthy-aging phenotype, case-control association tests were performed using PLINK software\cite{Purcell2007}.  Each SNP is analyzed by comparing the major and minor allele frequencies in cases versus controls, by applying a Chi-squared ($\chi^{2}$) test.
+
+The power of a Chi-squared test to detect a genetic association is based on a comparison of a null $\chi^{2}_{(1-\alpha)}$ distribution to an alternative $\chi^{2}$ distribution with non-centrality parameter $\lambda$, proportional to the effect size\cite{DeBakker2005}.  It is expressed as follows:
+
+\begin{equation}
+\mathrm{Power} = \mathrm{P}(\chi^{2} (df, \lambda) \geq \chi^{2}_{1 - \alpha} (df)),
+\end{equation}
+
+\noindent where:
+
+\begin{equation}
+\lambda = \Delta^{2} N = \left( \frac{(p - q)^{2}}{q} \right) N
+\end{equation}
+
+\noindent and for a $2 \times 2$ contingency table, the number of degrees of freedom ($df$) are one.  
+
+Coding-region variants were nominated for genotyping based on three criteria.  Variants that showed a suggestive $P$-value ($< 0.05$) based on a comparison of the estimated \ac{MAF} from pooled Illumina GA II sequencing were genotyped, as were a set of 64 tag \ac{SNP}s that were designed to capture all common variants present at $>1\%$ in the European population, with linkage disequilibrium of at least $r^{2} = 0.8$\cite{saxena2006comprehensive}.  Finally, any variant with an estimated \ac{MAF} of $> 0.05$ based on pooled sequencing that did not fit the first two criteria was also included.  In total, 92 SNPs were nominated for genotyping (see Supplemental Table ~\ref{sup.tab.mito_snp_select}). 
+ 
+Due to our limited statistical power to detect moderate effects in low-frequency variants, a \ac{MAF} cut-off of $10\%$ was applied before association testing.  This limited the number of \ac{SNP}s that qualified for testing to nine control-region \ac{SNP}s and seven coding-region \ac{SNP}s (See tables ~\ref{assoc.tab.cr} and ~\ref{assoc.tab.coding}, respectively).
+
+One \ac{SNP} in the control region was selected for testing based on previous reports of its association with longevity in Italian\cite{zhang2003strikingly}, Finnish and Japanese\cite{niemi2005combination} populations.
+
+\begin{figure}
+\noindent\makebox[\textwidth]{%
+  \includegraphics[width=0.85\textwidth]{fig/power_curve.png}}
+  \caption[Statistical Power for Association Test]{
+    \small{\textbf{Power to Detect Association.} Statistical power was calculated using PS software\cite{Dupont1990}. Curves are shown for the following control MAFs: 0.01 (blue), 0.05 (orange),0.10 (yellow), 0.25 (green) and 0.50 (purple).  For all curves, $\alpha = 0.05$ number of cases = 419, number of controls = 415.}}
+  \label{assoc.fig.power}
+\end{figure}
+
+\section{Methods}\label{assoc.methods}
+
+\subsection{Power Calculations}
+Statistical power was calculated with the PS power and sample size calculator\cite{Dupont1990}.  Power curves were calculated for a sample of 419 cases and 415 controls, at minor allele frequencies of 0.01, 0.05, 0.10, 0.25 and 0.50, with a false-positive rate $\alpha = 0.05$.
+
+\subsection{Genotyping and Quality Control}
+Genotyping was performed on the Sequenom MassARRAY platform at the McGill University/Genome Qu\'{e}bec Innovation Centre.  A set of 92 SNPs were included in the first assay set.  A set of 37 genotyping assays were repeated due to quality control failure.
+
+Quality control was performed in collaboration with Dr. Denise Daley (University of British Columbia, St.Paul's Hospital).  Assays with call rates below 95\% were considered `failed' and were re-designed.  Genotype cluster plots were visually inspected for irregularities.
+
+\section{Results}
+This study is powered to detect an odds ratio of at least 1.75 (or 0.45) for a variant at minor allele frequency of $\> 0.10$ with a false-positive rate of 0.05 (see ~\ref{assoc.fig.power}).
+
+Of the 92 SNPs that were chosen for the initial round of Sequenom genotyping, 37 failed quality control (See ~\ref{appendix.table.repeated_snps}) due to low call rates.  These assays were re-designed and repeated.  Of the second set, only three assays failed quality controls (mt9947, rs41345446 and rs41347846).
+
+After performing $\chi^{2}$ tests for association between mtDNA alleles and healthy aging, no variants that were tested showed association with the healthy aging phenotype, at a $p$-value significance threshold of 0.05.  The lowest $p$-value for control region SNPs was rs117135796 at position 152, with a $p$-value of 0.258 and odds ratio of 0.81.  For coding region SNPs, the lowest $p$-value was 0.280, with odds ratio 1.11 for rs2853495 at position 11,719 within the MT-ND4 gene.
+
+The rs62581312 variant at position 150 within the control region showed a $p$-value of 0.171 and odds ratio of 0.72.
+
+\begin{table}[!htb]
+\begin{minipage}{\textwidth}
+\caption{Mitochondrial Control Region (MAF $>$ 0.10)}
+\label{assoc.tab.cr}
+\noindent\makebox[\textwidth]{%
+\footnotesize
+\begin{tabular}{l r r c c c c c c c}
+Chr &          ID & Position & Minor Allele & Major Allele & $F_{A}$\footnote{Minor Allele Frequency in `Affecteds' (seniors)} & $F_{U}$\footnote{Minor Allele Frequency in `Unaffecteds' (controls)} & $\chi^{2}$\footnote{$\chi^{2}$ test statistic} & $P$ & Odds Ratio \\ \hline 
+  M &   rs3087742 &     73 &  A & G & 0.456 & 0.442 & 0.163 & 0.726 & 1.06 \\
+  M & rs117135796 &    152 &  C & T & 0.185 & 0.218 & 1.405 & 0.258 & 0.81 \\
+  M &   rs2857291 &    195 &  C & T & 0.170 & 0.181 & 0.173 & 0.714 & 0.93 \\
+  M &  rs28625645 &    489 &  C & T & 0.102 & 0.098 & 0.031 & 0.908 & 1.04 \\
+  M &     mt16126 & 16,126 &  C & T & 0.195 & 0.167 & 1.083 & 0.318 & 1.21 \\
+  M &  rs55749223 & 16,189 &  C & T & 0.139 & 0.118 & 0.811 & 0.404 & 1.21 \\
+  M &   rs2857290 & 16,270 &  T & C & 0.107 & 0.093 & 0.425 & 0.561 & 1.16 \\
+  M &  rs34799580 & 16,311 &  C & T & 0.151 & 0.167 & 0.384 & 0.567 & 0.89 \\
+  M &   rs3937033 & 16,519 &  T & C & 0.340 & 0.348 & 0.062 & 0.826 & 0.96 \\
+\end{tabular}}
+\end{minipage}
+\end{table}
+
+\begin{table}[!htb]
+\begin{minipage}{\textwidth}
+\caption{Mitochondrial Coding Region (MAF $>$ 0.10)}
+\label{assoc.tab.coding}
+\noindent\makebox[\textwidth]{%
+\footnotesize
+\begin{tabular}{l r r c c c c c c c}
+Chr &         ID & Position & Minor Allele & Major Allele & $F_{A}$\footnote{Minor Allele Frequency in `Affecteds' (seniors)} & $F_{U}$\footnote{Minor Allele Frequency in `Unaffecteds' (controls)} & $\chi^{2}$\footnote{$\chi^{2}$ test statistic} & $P$ & Odds Ratio \\ \hline
+  M &  rs2853517 &     709  & G & A & 0.144 & 0.128 & 0.942 & 0.332 & 1.14 \\
+  M &  rs3928306 &   3,010  & C & T & 0.264 & 0.246 & 0.760 & 0.383 & 1.10 \\
+  M &  rs2015062 &   7,028  & A & G & 0.445 & 0.436 & 0.155 & 0.694 & 1.04 \\
+  M &  rs2853825 &   9,477  & G & A & 0.104 & 0.097 & 0.214 & 0.644 & 1.08 \\
+  M &  rs2853495 &  11,719  & A & G & 0.493 & 0.468 & 1.167 & 0.280 & 1.11 \\
+  M &  rs2853499 &  12,372  & C & T & 0.242 & 0.241 & 0.002 & 0.961 & 1.01 \\
+  M & rs28357681 &  14,798  & A & G & 0.158 & 0.145 & 0.516 & 0.473 & 1.10 \\
+\end{tabular}}
+\end{minipage}
+\end{table}
+
+\begin{table}[!htb]
+\begin{minipage}{\textwidth}
+\caption{Replication of rs62581312 (C150T)}
+\noindent\makebox[\textwidth]{%
+\footnotesize
+\begin{tabular}{l r r c c c c c c c}
+Chr &          ID & Position & Minor Allele & Major Allele & $F_{A}$\footnote{Minor Allele Frequency in `Affecteds' (seniors)} & $F_{U}$\footnote{Minor Allele Frequency in `Unaffecteds' (controls)} & $\chi^{2}$\footnote{$\chi^{2}$ test statistic} & $P$ & Odds Ratio \\ \hline
+  M &  rs62581312 &    150  & T & C & 0.082 & 0.110 & 1.88  & 0.171 & 0.72 \\
+\end{tabular}}
+\end{minipage}
+\end{table}
+
+\section{Discussion}
+It is notable that this study did not replicate the previously-reported association at position 150 of the mitochondrial control region\cite{zhang2003strikingly}. There are several potential explanations for this result. The study by Zhang et al. focused on a group of Italians aged 99-106 years, whereas our samples qualify at age 85 and are mainly of British ancestry. Although the association was replicated in both Finnish and Japanese populations,\cite{niemi2005combination} there may be population-specific genetic or environmental factors that combine with the position 150 polymorphism to effect the aging phenotype.
+
+Because the mitochondrial genome does not recombine, it is possible to identify sets of variants that are inherited together and form mitochondrial haplotypes.  These haplotypes have been traced to geographic/ancestral lineages across the world\cite{behar2007genographic}.  Previous studies have identified haplogroups that are associated with longevity\cite{dato2004association,Costa2009,de1999mitochondrial}.  In our study, we elected to combine a previously-published set of common European mitochondrial tag SNPs\cite{saxena2006comprehensive} with additional variants that were discovered by pooled next-generation sequencing.
+% Force a new page
+\newpage

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pdflatex diss;
+#xelatex diss;
+
+biber diss;
+#biber --bblencoding=UTF-8 diss;
+makeglossaries diss;
+#xelatex diss;
+#xelatex diss;
+pdflatex diss;
+pdflatex diss;

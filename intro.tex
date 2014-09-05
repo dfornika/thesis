@@ -1,0 +1,118 @@
+\chapter{Introduction}\label{intro}
+
+\section{Aging as a Genetic Disease}
+
+\subsection{The ``Healthy Aging'' Phenotype}
+Our goal is to study biological mechanisms of aging by identifying genetic variants that are associated with healthy aging.  This study focuses on individuals who have reached the upper end of the normal human lifespan in good health, as opposed to other longevity-based studies that focus on centenarians who may not be exceptionally healthy\cite{Costa2009,Sebastiani2012,zhang2003strikingly}.
+
+This project has been carried out using samples and phenotype data from the Genomics, Genetics and Gerontology ($G^{3}$) Study of Healthy Aging. In this study, cases are defined as having a ``healthy aging'' phenotype if they reached the age of 85 years without being diagnosed with cancer, (excluding non-melanoma skin cancer) cardiovascular disease, major pulmonary disease (excluding asthma), Alzheimer disease or diabetes.  They have been further characterized by means of the Mini Mental State Examination for determination of moderate to severe cognitive impairment\cite{folstein1975mini}, the Timed Up and Go test of basic mobility skills\cite{podsiadlo1991timed} , the Geriatric Depression Scale\cite{yesavage1983geriatric} and the Instrumental Activities of Daily Living Scale\cite{katz1983assessing}.
+
+Controls are between the ages of 40 and 54 years, and were not recruited with respect to health status.  As such, they are representative of the general population with respect to their probability of reaching the age of 85 years without acquiring one of the five common age-related diseases listed above.  Ideally, our controls would be a random sample of the population at the time that our cases were in mid-life, and we believe that these controls are a good proxy for that ideal sample.  Specifically, we believe that the allele frequencies of our control sample should be a good approximation of the allele frequencies of the (now largely deceased) population that our cases originated from.
+
+\section{Mitochondria and Aging}
+
+\subsection{Mitochondrial Genome Structure and Regulation}
+Human mitochondria have a 16.5 kb circular genome, which encodes 13 protein-coding genes, (See table ~\ref{intro.table.mito_proteins}) 22 \ac{tRNA}s, and two \ac{rRNA}s (see figure~\ref{intro.fig.mtdna_map}).  The protein-coding genes encode subunits of the mitochondrial electron transport chain complexes I, III and IV, and two subunits of ATP synthase.  In contrast with the nuclear genome, there is very little non-coding sequence in the human mitochondrial genome.  The majority of the non-coding sequence is contained within the 1.1 kb control region, where three known promoters coordinate expression of the entire mitochondrial chromosome.  Outside of the control region, the mitochondrial genes are tightly spaced, with clusters of tRNA genes located between protein-coding genes.
+
+\begin{figure}
+\noindent\makebox[\textwidth]{%
+  \includegraphics[width=1.4\textwidth]{fig/mtdna_map.png}}
+  \caption[Map of the Human Mitochondrial Genome]{
+    \small{\textbf{Map of the Human Mitochondrial Genome.} Non-coding control region (position 16,024\--576) is shown in grey.  Protein-coding genes are shown in blue, while RNA-coding genes are shown in red.  All gene labels are from the HUGO Gene Nomenclature Committee (www.genenames.org)}}
+  \label{intro.fig.mtdna_map}
+\end{figure}
+
+\begin{table}[htbp]
+\begin{minipage}{\textwidth}
+\caption{Selected Mitochondrial Diseases}
+\label{intro.table.mito_disease}
+\noindent\makebox[\textwidth]{%
+\footnotesize
+\begin{tabular}{r l r l}
+OMIM ID & Name                   & rCRS Positions Mutated  & Symptoms                  \\ \hline
+ 535000 & LHON                   & 11,778, 3,460, 14484    & Blindness                 \\
+ 540000 & MELAS                  & 3,243,                  & Myopathy, Lactic acidosis \\
+ 220110 & Complex IV Deficiency  & (various mutations in MT-CO1\--3) & Myopathy         \\
+ 256000 & Leigh Syndrome         & 4,681                   & CNS Lesions               \\
+ 545000 & MERRF                  & 8,344                   & Seizures, myopathy        \\
+ 530000 & Kearns-Sayre Syndrome  & (various deletions)     & Blindness, cardiomyopathy \\
+ 157640 & CPEO                   & (various deletions)     & Eye turn, hypogonadism
+\end{tabular}}
+\end{minipage}
+\end{table}
+
+Hundreds of additional mitochondrial proteins are encoded by the nuclear genome, and coordinated control of the two genomes is required for normal mitochondrial function\cite{hock2009transcriptional,ryan2007mitochondrial}.  Mitochondrial gene expression is controlled by transcription factors (TFAM, TFB1M, TFB2M) and an RNA polymerase (POLRMT) that are encoded on the nuclear genome.  A transcriptional regulatory network links a master regulator, PGC-1$\alpha$ (also known as PPARGC1A) to the mitochondrial genome.
+
+\begin{table}[htbp]
+\begin{minipage}{\textwidth}
+\caption{Mitochondrial Protein Genes}
+\label{intro.table.mito_proteins}
+\noindent\makebox[\textwidth]{%
+\footnotesize
+\begin{tabular}{l r l r}
+Gene & Uniprot Acession & ETC Complex & rCRS Position \\ \hline
+MT-ND1  &           P03886 & Complex I   &   3,307--4,262 \\
+MT-ND2  &           P03891 & Complex I   &   4,470--5,511 \\
+MT-COX1 &           P00395 & Complex IV  &   5,904--7,445 \\ 
+MT-COX2 &           P00403 & Complex IV  &   7,586--8,269 \\
+MT-ATP8 &           P03928 & Complex V   &   8,366--8,572 \\
+MT-ATP6 &           P00846 & Complex V   &   8,527--9,207 \\
+MT-COX3 &           P00414 & Complex IV  &   9,207--9,990 \\ 
+MT-ND3  &           P03897 & Complex I   & 10,059--10,404 \\
+MT-ND4L &           P03901 & Complex I   & 10,470--10,766 \\
+MT-ND4  &           P03905 & Complex I   & 10,760--12,137 \\
+MT-ND5  &           P03915 & Complex I   & 12,337--14,148 \\
+MT-ND6  &           P03923 & Complex I   & 14,149--14,673 \\
+MT-CYB  &           P00156 & Complex III & 14,747--15,887 \\
+\end{tabular}}
+\end{minipage}
+\end{table}
+
+The mitochondrial genome also contains a 1.1 kb control region (position 16024-576 on GenBank NC\_012920) which includes promoters for both the heavy and light strands, and the heavy strand origin of replication.  The control region also contains numerous transcription factor binding sites.  There are three hyper-variable sequences (HVS1, HVS2 and HVS3) within the control region that contain a relatively high density of polymorphisms, in comparison to the rest of the mitochondrial genome\cite{Stoneking2000}.
+
+The human mitochondrial genome is inherited exclusively from the mother.  Paternal mitochondria are selectively degraded after fertilization, by ubiquitin-mediated proteasomal degradation\cite{sutovsky2003early,thompson2003ubiquitination}.  There is no conclusive evidence for recombination in human \ac{mtDNA}\cite{eyre2001does}.  An extensive map of the geographic distribution of mitochondrial haplogroups in human populations has been recorded.  Together with geographic and genotype data from the non-recombining portion of the Y chromosome, this information has helped to trace early human migration out of Africa and across the globe\cite{behar2007genographic}.
+
+The mitochondrial genome is also highly polymorphic in all human populations.  A previous study of European mitochondrial genome diversity identified 144 single nucleotide polymorphisms present in $>1\%$ of a sample of 928 publicly available European mitochondrial genome sequences \cite{saxena2006comprehensive}.
+
+Numerous mitochondrial genetic diseases have been identified\cite{chinnery1999mitochondrial,schapira2012mitochondrial}. Several of these diseases, with their characteristic mutations are listed in table ~\ref{intro.table.mito_disease}. Symptoms vary widely, and include blindness, deafness, diabetes and ataxia.
+
+\subsection{Reactive Oxygen Species}
+Mitochondria are thought to contribute to the aging process through the production of \ac{ROS}, as a byproduct of oxidative phosphorylation\cite{Wallace1999, Moreno-Loshuertos2006}. Prolonged exposure to intracellular \ac{ROS} can cause damage to protein and lipids, and can cause somatic mutations in both the nuclear and mitochondrial genomes.
+
+During oxidative phosphorylation, electrons are passed from reduced \ac{NADH} and \ac{FMNH} to a group of mitochondrial inner membrane-bound enzymes that comprise the electron transport chain.  Electrons are passed down the chain in a series of redox reactions, releasing energy that is used to pump protons into the intermembrane space.  These reactions maintain the mitochondrial elechemical gradient that drives the production of ATP.  The majority of electrons passing through the electron transport chain will finally be combined with \ce{H^{+}} and \ce{1/2O2} to form \ce{H2O}, but a small percentage will form side-reactions that result in the production of highly unstable superoxide radicals, \ce{O2^{-.}}.  Superoxide quickly reacts with \ce{H2O} to form hydrogen peroxide, (\ce{H2O2}) itself a strong oxidizing agent.  Although small amounts of ROS are a normal byproduct of cellular metabolism, the accumulated effects of these reactions can degrade tissue, cause somatic mutations and lead to cellular senescence\cite{Toyokuni1999, Passos2007}.
+
+\subsection{The Role of Mitochondria in Apoptosis}
+Mitochondria integrate several intracellular signals including DNA damage response and pro-survival signals, as well as metabolic signals such as the ADP/ATP ratio and intracellular \ce{Ca^2+} concentrations.  Under high cellular stress conditions, these signals can initiate cell death via the intrinsic apoptotic pathway.  The pro-apoptotic proteins BAX and BAK are recruited to the mitochondrial membrane, resulting in increased membrane permeability and release of Cytochrome-c and SMAC/DIABLO from the mitochondrial intermembrane space into the cytosol.  The release of Cytochrome-c and SMAC/DIABLO leads to the activation of effector caspases that initiate the process of apoptosis.
+
+Apoptosis is a key protective mechanism against cancer.  When a cell acquires mutations or DNA damage that may lead to escape from the cell cycle and uncontrolled cell division, the apoptotic pathway can be activated to prevent the development of a malignancy.  Model organisms such as p53 knockout mice fail to activate the intrinsic apoptotic pathway in response to DNA damage and develop malignancies at a much higher rate than wild-type mice\cite{symonds1994p53}.  There is also evidence that variation in the mitochondrial genome itself can alter the probability that a cell will undergo apoptosis.  Studies of a lymphoblastoid cell line showed that a A4263G mutation in the mitochondrial isoleucine tRNA could alter mitochondrial membrane potential and lead to an increased rate of apoptosis\cite{yuqi2009voltage}.  Some have argued that many of the phenotypic hallmarks of aging (muscle loss, wrinkled skin, functional decline of internal organs) are due to the accumulated effects of apoptosis and senescence\cite{campisi2005senescent}.  They hypothesize that successful aging, (defined as reaching the age of 85 without being diagnosed with cancer, cardiovascular disease, diabetes, major pulmonary disease, or Alzheimer disease.)\cite{halaschek2009genetic} requires a fine balance between cancer surveillance by apoptosis and a maintenance of healthy pre-senescent tissue\cite{rodier2007two}.
+
+\subsection{The Role of Mitochondria in Cellular Senescence}
+Several lines of evidence indicate that mitochondria play a role in induction of cellular senescence. Senescent cells are characterized by growth arrest in the G1 phase of the cell cycle, accumulation of H2A.X foci and increased p53 activity indicative of DNA damage, and decreased telomere length\cite{passos2005mitochondria}.  The telomerase reverse transcriptase hTERT is translocated to mitochondria in response to oxidative stress, where it increases the rate of mtDNA damage and promotes apoptosis\cite{santos2004mitochondrial}.  This relationship between telomere maintenance and mtDNA maintenance is a recent discovery, and is not yet completely understood\cite{passos2007dna}.  Cells grown in high oxygen concentrations become senescent at an increased rate, and senescence can be delayed by addition of antioxidants or mild uncoupling agents to the growth medium\cite{haendeler2004antioxidants}.
+
+\subsection{Somatic Mitochondrial DNA Mutations and Aging}
+Mutations in the mitochondrial genome accumulate with age in somatic tissues. Mitochondrial DNA mutations have been observed to correlate with age in tissues such as heart muscle,\cite{hayakawa1992age} brain,\cite{soong1992mosaicism} and skeletal muscle\cite{melov1995marked}.  In addition to point mutations, accumulation of \ac{ROS}-damaged deoxyguanosine in the form of 8-Hydroxy-deoxyguanosine has been observed.
+
+\subsection{Mitochondrial Heteroplasmy and Tissue Heterogeneity}
+The number of mitochondria per cell varies from zero in red blood cells to several hundred in skeletal muscle cells, and each mitochondrion contains several copies of the mitochondrial genome.  Mutations can arise in somatic cells because of oxidative damage or replication errors by DNA polymerase-$\gamma$, and can be propagated to daughter cells after division.  Since each cell contains many copies of the mitochondrial genome, there may be a combination of mtDNA alleles in a particular cell or tissue\cite{Gyllensten2000,Li2010a}.  This phenomenon is known as heteroplasmy.  Several mitochondrial diseases, such as \ac{MERRF} or \ac{MELAS}, do not present physiological symptoms unless the causative mutation accumulates beyond a certain threshold level, sufficient to disrupt normal mitochondrial function\cite{Rossignol2003}.
+
+Although the accumulation of somatic mtDNA mutations is suspected to play a role in the aging process, our study is designed to detect heritable genetic factors that influence long-term good health.  Mutations that arise in skeletal muscle, epithelium, neurons and other somatic tissues are not passed on in the germline.  Only mutations that arise in the ova (or pre-oval germ cell lineage) can be passed on to the next generation.
+
+\subsection[Reported mtDNA Associations]{Reported Associations of Mitochondrial Genome Variants with Longevity}
+Several longevity-associated mtDNA variants have been reported in populations around the world.  A control region polymorphism at position 150 was associated with longevity in the Italian population and has been hypothesized to cause a re-organization of an origin of replication on the mtDNA\cite{zhang2003strikingly}.  The comparison of 52 centenarians (age range 99\--106 years) and 117 controls (age range 18\--98 years) showed a statistically significant difference (\ac{OR} $=5.09$, $P=0.0035$, Fisher's exact test) in the frequency of homoplasmic C150T transition in leukocytes.  Furthermore, the researchers noted that the abundance of heteroplasmic C150T mutation in fibroblasts was correlated with age.  
+
+The association signal at control region position 150 has been replicated in both the Japanese and Finnish populations\cite{niemi2005combination}.  In Finns, a comparison of 46 seniors (age 90 or 91 years) and 57 middle-aged controls showed a significant association (\ac{OR}$=1.50$, $P=0.037$, $\chi^{2}$ test) of the 150T allele with longevity.  A similar result was found in a smaller Japanese sample set of 19 seniors and 9 controls (\ac{OR}$=1.41$, $P=0.032$, $\chi^{2}$ test).
+
+A polymorphism in the MT-ND2 gene at position 5,178 of the coding region was found to be associated with longevity in the Japanese population\cite{Tanaka1998}.  The study investigated the relative frequencies of the 5178A and 5178C alleles, and found that the 5178A allele in 9 of 11 centenarians, versus 12 of 43 controls.  This same polymorphism was also associated with glucose tolerance in Japanese men, and may contribute to resistance to type II diabetes.  The MT-ND2 gene encodes a subunit of \ac{NADH} dehydrogenase, complex I of the mitochondrial electron transport chain.
+
+\section{Hypothesis and Specific Aims}
+We hypothesize that healthy aging is influenced by sequence variation in the mitochondrial genome.  Therefore, one or more common mitochondrial alleles will be associated with healthy aging.
+
+The specific aims of this study are as follows:
+
+\begin{enumerate}
+\item Survey the mitochondrial genomes of cases and controls for sequence variants.
+\item Determine whether common variation in the mitochondrial genome is associated with healthy aging in our study population.
+\end{enumerate}
+
+% Force a new page
+\newpage
